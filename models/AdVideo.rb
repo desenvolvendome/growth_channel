@@ -1,4 +1,4 @@
-class Advideo
+class AdVideo
     @campaign
     @views
 
