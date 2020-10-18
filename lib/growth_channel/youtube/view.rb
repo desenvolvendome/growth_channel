@@ -7,7 +7,7 @@ module Youtube
       @file_path = file_path
     end
 
-    def count
+    def total_views
       reports = CSV.read(@file_path, headers: true)
       total_views = 0
       reports.each do |row|
