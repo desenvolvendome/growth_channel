@@ -1,4 +1,4 @@
-# GrowthChannel
+# GrowthChannel ![CI](https://github.com/desenvolvendo-me/growth_channel/workflows/Ruby/badge.svg)
 
 ## Como testar
 
