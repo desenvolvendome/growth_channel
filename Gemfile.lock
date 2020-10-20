@@ -7,7 +7,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     byebug (11.1.3)
-    debase (0.3.0.beta34)
+    debase (0.2.4.1)
       debase-ruby_core_source (>= 0.10.2)
     debase-ruby_core_source (0.10.11)
     diff-lcs (1.4.4)
@@ -25,7 +25,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.9.0)
     rspec-support (3.9.3)
-    ruby-debug-ide (0.8.0.beta24)
+    ruby-debug-ide (0.7.2)
       rake (>= 0.8.1)
 
 PLATFORMS
@@ -33,11 +33,11 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  debase
+  debase (~> 0.2.4.1)
   growth_channel!
   rake (~> 12.0)
   rspec (~> 3.0)
-  ruby-debug-ide
+  ruby-debug-ide (~> 0.7.2)
 
 BUNDLED WITH
    2.1.2
