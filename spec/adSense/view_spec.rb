@@ -13,6 +13,14 @@ RSpec.describe "AdSense::View" do
       expect(total_views_per_video).to eq(result)
     end
 
+    it "total_views_per_video_ideias" do
+      groups = AdSense::View.new("spec/suports/report_adsense_sample.csv").total_views_per_video_ideias
+      result = [
+          {id_video_principal: 'v1', views: 411 + 301},
+          {id_video_principal: 'v10', views: 107 + 0 + 37}
+      ]
+      expect(groups).to match_array(result)
+    end
   end
 
 end
