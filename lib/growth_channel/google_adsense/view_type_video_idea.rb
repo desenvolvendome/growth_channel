@@ -8,7 +8,7 @@ module GoogleAdSense
     end
 
     def total_views_per_idea_videos
-      "Idea videos: #{total_views}"
+      total_views
     end
 
     def total_views
