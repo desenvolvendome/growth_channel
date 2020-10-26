@@ -18,6 +18,17 @@ module AdSense
       total_per_video
     end
 
+    def total_internal_video_views
+      total_per_video = []
+      main_internal_videos.each do |main_videos|
+        id_main_video = main_videos.first[:id_main_video]
+        sum_views = main_videos.inject(0) { |sum, hash| sum + hash[:views] }
+
+        total_per_video.push({id_main_video: id_main_video, views: sum_views})
+      end
+      total_per_video
+    end
+
     private
 
     def read_per_video
@@ -35,6 +46,17 @@ module AdSense
 
     def videos_principais_agrupados
       read_per_video.group_by { |h| h[:id_video_principal] }.values
+    end
+
+    def main_internal_videos
+      internal_videos = []
+      read_per_video.each do |video|
+        if video[:id_video].split(".").last.to_i == 0
+          internal_videos.push(video)
+        end
+      end
+
+      return internal_videos.group_by { |h| h[:id_video_principal] }.values
     end
 
   end
