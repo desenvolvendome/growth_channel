@@ -40,7 +40,7 @@ module AdSense
         title = row["Campanha"]
         views = row["Visualizações"].to_i
 
-        videos_principais.push({id_video: id_video, id_video_principal: id_video_principal, views: views, title: title})
+        videos_principais.push({id_video:id_video,id_video_principal: id_video_principal, views: views})
       end
       videos_principais
     end
@@ -60,6 +60,7 @@ module AdSense
       end
 
       return internal_videos.group_by { |h| h[:id_video] }.values
+
     end
 
   end
