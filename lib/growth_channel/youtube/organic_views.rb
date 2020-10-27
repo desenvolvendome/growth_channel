@@ -24,9 +24,9 @@ module OrganicViews
       report = CSV.read(@file_path, headers: true)
       main_videos = []
       report.each do |row|
-        id_main_video = row["Video title"].split(":").first #v1.0 #v1.1
-        test = id_main_video.split(".").last.to_i
-        if test == 0
+        id_main_video = row["Video title"].split(":").first
+        version = id_main_video.split(".").last.to_i
+        if version == 0
           views = row["Views"].to_i
           main_videos.push({id_main_video: id_main_video, views: views})
         end
