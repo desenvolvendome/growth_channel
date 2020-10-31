@@ -29,28 +29,14 @@ module AdSense
       total_per_video
     end
 
-    def total_internal_video_views
-      total_per_video = []
-      main_internal_videos.each do |main_video|
-        id_video = main_video.first[:id_video]
-        sum_views = main_video.inject(0) { |sum, hash| sum + hash[:views] }
-
-        total_per_video.push({id_video: id_video, views: sum_views})
-      end
-      total_per_video
-    end
-
-    def main_internal_videos
-      internal_videos = []      
-      read_per_video.each do |video|        
-       
+    def total_internal_video_views 
+      views = 0
+      read_per_video.each do |video|
         if video[:id_video].split(".").last.to_i == 0 && (video[:title].include? "INTERNOS")
-          internal_videos.push(video)
+          views += video[:views]
         end
       end
-
-      return internal_videos.group_by { |h| h[:id_video] }.values
-
+      return views
     end
 
     private
