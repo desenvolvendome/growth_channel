@@ -24,14 +24,19 @@ module AdSense
       reports = CSV.read(@file_path, headers: true)
       videos_principais = []
       reports.each do |row|
-        id_video = row["Campanha"].split(" ").first
-        id_video_principal = id_video.split(".").first
-        views = row["Visualizações"].to_i
+        id_video = row['Campanha'].split(' ').first
+        id_video_principal = id_video.split('.').first
+        views = row['Visualizações'].to_i
 
         videos_principais.push({id_video_principal: id_video_principal, views: views})
       end
       videos_principais
     end
+
+    # def header_csv
+    # CSV.read(@file_path)
+    #
+    # end
 
     def videos_principais_agrupados
       read_per_video.group_by { |h| h[:id_video_principal] }.values

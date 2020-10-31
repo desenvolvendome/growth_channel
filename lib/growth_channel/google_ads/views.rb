@@ -29,7 +29,7 @@ module GoogleAds
         end
         total_per_video
       end
-  
+
       private
   
       def read_per_video
@@ -59,5 +59,7 @@ module GoogleAds
 
         return videos_externo.group_by { |h| h[:id_video_principal] }.values
       end
+
+
     end
   end
