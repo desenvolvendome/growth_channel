@@ -30,15 +30,6 @@ module GoogleAds
       total_per_video
     end
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      def get_videos_ideias
-        total_per_video = []
-        group_videos_by_tag('[Ideias]').each do |videos_principais_agrupado|
-          id_video_principal = videos_principais_agrupado.first[:id_video_principal]
-          sum_views = videos_principais_agrupado.inject(0) { |sum, hash| sum + hash[:views] }
-=======
     def get_videos_ideias
       total_per_video = []
       group_videos_by_tag('[Ideias]').each do |videos_principais_agrupado|
@@ -49,7 +40,6 @@ module GoogleAds
       end
       total_per_video
     end
->>>>>>> 40e571d8a216008cda9197f1c4d6de774d4037e2
 
     def cost_benefit_per_video
       group_videos_cost_benefit = []
@@ -61,32 +51,6 @@ module GoogleAds
         cost_benefit = cost_benefit.floor(2)
         group_videos_cost_benefit.push({ id_video_principal: id_video_principal, cost_benefit: cost_benefit })
       end
-<<<<<<< HEAD
-  
->>>>>>> 56edde726321e8ce26bc86703b404b57c822a881
-      private
-
-      # @return [Array_0f_all_videos]
-      def read_per_video
-        reports = CSV.read(@file_path, headers: true)
-        videos_principais = []
-        reports.each do |row|
-          tags_campanha = row['Campanha'].split(' ')
-          id_video = tags_campanha.first
-          tags_campanha.shift
-          id_video_principal = id_video.split('.').first
-          views = row['Visualizações'].to_i
-
-          videos_principais.push({
-                                     id_video: id_video,
-                                     id_video_principal: id_video_principal,
-                                     tags_campanha: tags_campanha,
-                                     views: views
-                                 })
-        end
-        videos_principais
-=======
-      group_videos_cost_benefit
     end
 
     private
@@ -118,7 +82,6 @@ module GoogleAds
                                  watched_75: rdv75,
                                  watched_100: rdv100
                                })
->>>>>>> 40e571d8a216008cda9197f1c4d6de774d4037e2
       end
       videos_principais
     end
@@ -152,7 +115,7 @@ module GoogleAds
       read_per_video.group_by { |h| h[:id_video_principal] }.values
     end
 
-    def videos_principais_agrupados_externo
+    def videos_principais_externo
       videos_externo = []
       read_per_video.each do |video|
         videos_externo.push(video) if video[:id_video].split('.').last.to_i.positive?
@@ -160,26 +123,14 @@ module GoogleAds
       videos_externo.group_by { |h| h[:id_video_principal] }.values
     end
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-      def group_videos_by_tag(tag)
-        group = []
-        read_per_video.each do |video|
-          group.push(video) if video[:tags_campanha].include? tag
-        end
-        group.group_by { |h| h[:id_video_principal] }.values
-      end
->>>>>>> 56edde726321e8ce26bc86703b404b57c822a881
-=======
     def group_videos_by_tag(tag)
       group = []
       read_per_video.each do |video|
         group.push(video) if video[:tags_campanha].include? tag
       end
       group.group_by { |h| h[:id_video_principal] }.values
->>>>>>> 40e571d8a216008cda9197f1c4d6de774d4037e2
+
     end
   end
 end
