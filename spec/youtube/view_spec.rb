@@ -27,6 +27,7 @@ RSpec.describe "Youtube::View" do
         {id_video_principal: 'v3', views: 996},
         {id_video_principal: 'v4', views: 933},
         {id_video_principal: 'v5', views: 2801},
+        {id_video_principal: 'V5', views: 419},
         {id_video_principal: 'v6', views: 4270},
         {id_video_principal: 'v7', views: 6983},
         {id_video_principal: 'v8', views: 3148},
