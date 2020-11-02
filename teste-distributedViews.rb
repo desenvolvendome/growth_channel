@@ -1,9 +1,11 @@
 require_relative 'DistributedViews.rb'
+require 'growth_channel/util/manage_csv'
 
-_filepath = "Relatorio-de-Campanhas.csv"
+@@report = ManageCSV.read_csv_adsense
+
     _distributedInfo = DistributedInfo.new
     
-    _distributedInfo.csvUpload(_filepath)
+    _distributedInfo.csvUpload(@@report)
     
     _data = _distributedInfo.getData()
     
