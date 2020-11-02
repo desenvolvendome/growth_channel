@@ -1,10 +1,11 @@
 require 'csv'
+require 'growth_channel/util/manage_csv'
 
 module OrganicViews
   class View
 
-    def initialize(file_path)
-      @file_path = file_path
+    def initialize
+      @@report = ManageCSV.read_csv_youtube
     end
 
     def total_views_per_video
@@ -21,9 +22,8 @@ module OrganicViews
     private
 
     def read_per_video
-      report = CSV.read(@file_path, headers: true)
       main_videos = []
-      report.each do |row|
+      @@report.each do |row|
         id_main_video = row["Video title"].split(":").first
         version = id_main_video.split(".").last.to_i
         if version == 0

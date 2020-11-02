@@ -5,7 +5,7 @@ RSpec.describe "OrganicViews::View" do
   context "count" do
 
     it "total_views_per_video" do
-      total_views_per_video = OrganicViews::View.new("spec/suports/report_youtube.csv").total_views_per_video
+      total_views_per_video = OrganicViews::View.new.total_views_per_video
       result = [
           {id_main_video: "v1.0", views: 283},
           {id_main_video: "v10.0", views: 537},
