@@ -1,10 +1,11 @@
 require 'csv'
+require 'growth_channel/util/manage_csv'
 
 module GoogleAdSenses
     class View
 
-        def initialize(file_path)
-            @file_path = file_path
+        def initialize
+            @@report = ManageCSV.read_csv_adsense
         end
 
         def total_views_per_garanhoes_videos
@@ -22,9 +23,8 @@ module GoogleAdSenses
         end
 
         def read_views_garanhoes_videos
-            reports = CSV.read(@file_path, headers: true)
             views_list = []
-            reports.each do |row|
+            @@report.each do |row|
                 flag_video = row['Campanha'].split.last
                 if validate_flag(flag_video)
                     view = row["Visualizações"].to_i
