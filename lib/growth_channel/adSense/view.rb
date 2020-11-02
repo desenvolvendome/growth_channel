@@ -1,10 +1,11 @@
 require 'csv'
+require 'growth_channel/util/manage_csv'
 
 module AdSense
   class View
 
-    def initialize(file_path)
-      @file_path = file_path
+    def initialize
+      @@report = ManageCSV.read_csv_adsense
     end
 
     def total_views_per_video
@@ -29,17 +30,28 @@ module AdSense
       total_per_video
     end
 
+    def total_internal_video_views 
+      views = 0
+      read_per_video.each do |video|
+        if video[:id_video].split(".").last.to_i == 0 && (video[:title].include? "INTERNOS")
+          views += video[:views]
+        end
+      end
+      return views
+    end
+
     private
 
     def read_per_video
-      reports = CSV.read(@file_path, headers: true)
       videos_principais = []
-      reports.each do |row|
+      @@report.each do |row|
         id_video = row["Campanha"].split(" ").first
         id_video_principal = id_video.split(".").first
         views = row["Visualizações"].to_i
+        
+        title = row["Campanha"].split("[]").to_s
 
-        videos_principais.push({id_video:id_video,id_video_principal: id_video_principal, views: views})
+        videos_principais.push({id_video:id_video,id_video_principal: id_video_principal, views: views, title: title})
       end
       videos_principais
     end

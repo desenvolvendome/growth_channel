@@ -1,16 +1,16 @@
 require 'csv'
+require 'growth_channel/util/manage_csv'
 
 module Youtube
   class View
 
-    def initialize(file_path)
-      @file_path = file_path
+    def initialize
+      @@report = ManageCSV.read_csv_youtube
     end
 
     def total_views
-      reports = CSV.read(@file_path, headers: true)
       total_views = 0
-      reports.each do |row|
+      @@report.each do |row|
         views = row["Views"].to_i
         total_views += views
       end
@@ -31,9 +31,8 @@ module Youtube
     private
 
     def read_per_video
-      reports = CSV.read(@file_path, headers: true)
       videos_principais = []
-      reports.each do |row|
+      @@report.each do |row|
         id_video = row["Video title"].split(":").first
         id_video_principal = id_video.split(".").first
         views = row["Views"].to_i
