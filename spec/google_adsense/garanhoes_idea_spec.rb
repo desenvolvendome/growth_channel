@@ -6,7 +6,7 @@ RSpec.describe "GoogleAdSense::View" do
   context "View per type video idea" do
 
     it "total_views_per_idea_videos" do
-      type_idea = GoogleAdSense::View.new("spec/suports/relatorio_de_campanhas.csv").total_views_per_idea_videos
+      type_idea = GoogleAdSense::View.new.total_views_per_idea_videos
     expect(type_idea).to eq(8198)
 
     end
@@ -15,7 +15,7 @@ RSpec.describe "GoogleAdSense::View" do
   context "View per type video Garanhões" do
 
     it "total_views_per_garanhoes_videos" do
-      type_garanhoes = GoogleAdSenses::View.new("spec/suports/relatorio_de_campanhas.csv").total_views_per_garanhoes_videos
+      type_garanhoes = GoogleAdSenses::View.new.total_views_per_garanhoes_videos
     expect(type_garanhoes).to eq(10861)
 
     end
