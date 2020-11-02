@@ -7,7 +7,7 @@ RSpec.describe "GoogleAdSense::View" do
 
     it "total_views_per_idea_videos" do
       type_idea = GoogleAdSense::View.new.total_views_per_idea_videos
-    expect(type_idea).to eq(8198)
+    expect(type_idea).to eq(16416)
 
     end
   end
