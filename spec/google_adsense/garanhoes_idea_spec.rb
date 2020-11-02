@@ -1,5 +1,5 @@
 require 'growth_channel/google_adsense/view_type_video_idea'
-require 'growth_channel/google_adsense/view_type_video_granhoes'
+require 'growth_channel/google_adsense/view_type_video_garanhoes'
 
 RSpec.describe "GoogleAdSense::View" do
 
