@@ -1,4 +1,5 @@
 require 'csv'
+require 'growth_channel/util/manage_csv'
 
 module AdSense
   class View
