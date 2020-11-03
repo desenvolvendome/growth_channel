@@ -161,8 +161,6 @@ module GoogleAds
       videos_externo.group_by { |h| h[:id_video_principal] }.values
     end
 
-
-  
       def videos_principais_agrupados_externo
         videos_externo = []
         read_per_video.each do |video|
@@ -304,4 +302,4 @@ module GoogleAds
 end
 
 end
-
+end
