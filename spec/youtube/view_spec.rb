@@ -1,6 +1,19 @@
 require 'growth_channel/youtube/view'
+require 'growth_channel/util/manage_csv'
 
 RSpec.describe "Youtube::View" do
+
+  context "YouTube CSV Validation" do
+
+    it "csv invalid" do
+      invalid = ManageCSV.read_csv_youtube
+
+      expect(invalid).to eq("'v10.3a: Como configurar o Ruby para estudar?': It is not in the correct pattern")
+    end
+
+  end
+
+  # --------------------------------------------
 
   context "count" do
 
