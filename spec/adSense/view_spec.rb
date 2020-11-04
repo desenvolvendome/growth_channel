@@ -1,15 +1,3 @@
-# frozen_string_literal: true
-
-require 'growth_channel/adSense/view'
-
-RSpec.describe 'AdSense::View' do
-  context 'count' do
-    it 'total_views_per_video' do
-      total_views_per_video = AdSense::View.new('spec/suports/report_adsense_sample.csv').total_views_per_video
-      result = [
-        { id_video_principal: 'v1', views: 411 + 301 },
-        { id_video_principal: 'v10', views: 451 + 107 + 0 + 37 }
-
 require 'growth_channel/adSense/view'
 
 RSpec.describe "AdSense::View" do
@@ -36,14 +24,10 @@ RSpec.describe "AdSense::View" do
           {id_video_principal: 'v7', views: 1183 + 404 + 2393 + 398 + 0 + 394 + 388 + 356 + 64 + 247},
           {id_video_principal: 'v8', views: 398 + 264 + 387 + 368 + 392 + 345 + 283 + 64},
           {id_video_principal: 'v9', views: 442 + 367 + 397 + 384 + 125 + 363 + 43 + 89 + 109 + 63}
-
       ]
       expect(total_views_per_video).to eq(result)
     end
 
-  end
-
-end
     it "total_views_per_video_ideias" do
       groups = AdSense::View.new.total_views_per_video_ideias
       result = [

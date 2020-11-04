@@ -1,20 +1,21 @@
-require 'growth_channel/adSense/validate_format_csv'
+require 'growth_channel/google_ads/validate_format_csv'
 
 RSpec.describe 'Validate_Format::Validate' do
   context "Validação" do
 
     it 'validação csv valido' do
-      validate = Validate_Format::Validate.new('spec/suports/report_adsense_sample.csv').validate_csv
-      resutl = ['Campanha','Visualizações']
+      validate = Validate_Format::Validate.new('spec/suports/report_adsense.csv').validate_csv
+      result = ['Campanha','Visualizações']
 
-      expect(validate).to eq(resutl)
+      expect(validate).to eq(result)
     end
 
-    # it 'validação csv invalido' do
-    #   validate2 = AdSense::View.new('spec/suports/report_adsense_sample.csv').validate_csv
-    #
-    #   expect(validate2).to eq("CSV invalido")
-    # end
+    it 'validação scv invalido' do
 
+      validate = Validate_Format::Validate.new('spec/suports/report_adsense.csv').validate_csv
+      result = !['Campanha','Visualizações']
+
+      expect(validate).not_to eq(result)
+    end
   end
 end
