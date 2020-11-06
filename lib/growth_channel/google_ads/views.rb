@@ -132,5 +132,6 @@ module GoogleAds
       end
       group.group_by { |h| h[:id_video_principal] }.values
     end
+
   end
 end
