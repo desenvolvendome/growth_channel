@@ -9,8 +9,8 @@ class ManageCSV
                 if !row["Views"].match("[0-9]+")
                     raise ArgumentError.new('Formato inválido.')  
                 end
-            end          
-        end   
+            end                      
+        end
 
         return report  
             
