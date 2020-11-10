@@ -1,21 +1,55 @@
 require 'growth_channel/google_ads/validate_format_csv'
 
 RSpec.describe 'Validate_Format::Validate' do
+
   context "Validação" do
 
-    it 'validação csv valido' do
-      validate = Validate_Format::Validate.new('spec/suports/report_adsense.csv').validate_csv
-      result = ['Campanha','Visualizações']
+    context 'csv válido' do
 
-      expect(validate).to eq(result)
+      it 'com cabecalho' do
+        #DADO
+        csv_valido = 'spec/suports/report_adsense.csv'
+
+        #QUANDO
+        validate = Validate_Format::Validate.new(csv_valido).validate_csv
+
+        #ENTÃO
+        result = "CSV válido"
+
+        expect(validate).to eq(result)
+      end
+
+      it 'com cabecalho posicao diferente' do
+        #DADO
+        csv_valido = 'spec/suports/csv_validos/report_adsense_com_posicao_diferente.csv'
+
+        #QUANDO
+        validate = Validate_Format::Validate.new(csv_valido).validate_csv
+
+        #ENTÃO
+        result = "CSV válido"
+
+        expect(validate).to eq(result)
+      end
+
     end
 
-    it 'validação scv invalido' do
+    context "csv inválido" do
 
-      validate = Validate_Format::Validate.new('spec/suports/report_adsense.csv').validate_csv
-      result = !['Campanha','Visualizações']
+      it 'sem cabecalho' do
+        #DADO
+        csv_invalido = 'spec/suports/csv_invalidos/report_adsense_sem_cabecalho.csv'
 
-      expect(validate).not_to eq(result)
+        #QUANDO
+        validate = Validate_Format::Validate.new(csv_invalido).validate_csv
+
+        #ENTÃO
+        result = "CSV inválido"
+        expect(validate).to eq(result)
+      end
+
     end
+
   end
+
 end

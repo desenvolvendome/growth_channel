@@ -11,12 +11,17 @@ module Validate_Format
 
     def validate_csv
       reports = CSV.read(@file_path)
-      expected_header = ['Campanha', 'Visualizações']
 
-      if reports[0].take(2) == expected_header
-        reports[0].take(2)
+      header_expecteds = ['Campanha', 'Visualizações']
+
+      header = reports.first
+
+      valid = (header - header_expecteds).size < header.size
+
+      if valid
+        "CSV válido"
       else
-        "CSV invalido, headers esperado: Campanha, Visualizações"
+        "CSV inválido"
       end
 
     end

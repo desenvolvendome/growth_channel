@@ -22,9 +22,9 @@ module GoogleAds
       total_per_video
     end
 
-    def total_views_video_externo
+    def get_videos_externo
       total_per_video = []
-      videos_principais_agrupados_externo.each do |videos_principais_agrupado|
+      group_videos_by_tag('[EXTERNOS]').each do |videos_principais_agrupado|
         id_video_principal = videos_principais_agrupado.first[:id_video_principal]
         sum_views = videos_principais_agrupado.inject(0) { |sum, hash| sum + hash[:views] }
 
@@ -32,6 +32,17 @@ module GoogleAds
       end
       total_per_video
     end
+
+    # def get_videos_custo
+    #   total_per_video = []
+    #   group_videos_by_tag('[EXTERNOS]').each do |videos_principais_agrupado|
+    #     id_video_principal = videos_principais_agrupado.first[:id_video_principal]
+    #     sum_views = videos_principais_agrupado.inject(0) { |sum, hash| sum + hash[:cost] }
+    #
+    #     total_per_video.push({id_video_principal: id_video_principal, cost: sum_views})
+    #   end
+    #   total_per_video
+    # end
 
     def get_videos_ideias
       total_per_video = []
