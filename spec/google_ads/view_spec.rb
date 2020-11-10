@@ -42,27 +42,17 @@ RSpec.describe "GoogleAds::View" do
       groups = GoogleAds::View.new.get_videos_ideias
       result = [
         { id_video_principal: 'v1', views: 411 + 301 },
-          { id_video_principal: 'v10', views: 107 + 0 + 37 }
+        { id_video_principal: 'v10', views: 107 + 0 + 37 }
       ]
       expect(true).to be groups.include? result[0]
       expect(true).to be groups.include? result[1]
     end
 
-    # it 'custo_beneficio_externo' do
-    #   groups = GoogleAds::View.new.get_videos_custo
-    #   result = [
-    #       { id_video_principal: 'v1', custo: 10.05 },
-    #       { id_video_principal: 'v10', custo: 6.96 }
-    #   ]
-    #   expect(true).to be groups.include? result[0]
-    #   expect(true).to be groups.include? result[1]
-    # end
-
     it 'cost_benefit_per_video' do
       groups = GoogleAds::View.new.cost_benefit_per_video
       result = [
         { id_video_principal: 'v1', cost_benefit: (((712 + (46.43 * 2) + (30.92 * 4) + (25.17 * 5) + (17.97 * 3))/15)/ 10.05).floor(2)},
-          { id_video_principal: 'v10', cost_benefit: (((595 + (29.519 * 2) + (17.27 * 4) + (10.07 * 5) + (5.5 * 3))/15)/ 6.96).floor(2)},
+        { id_video_principal: 'v10', cost_benefit: (((595 + (29.519 * 2) + (17.27 * 4) + (10.07 * 5) + (5.5 * 3))/15)/ 6.96).floor(2)},
       ]
       expect(true).to be groups.include? result[0]
       expect(true).to be groups.include? result[1]
