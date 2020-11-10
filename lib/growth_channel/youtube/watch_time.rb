@@ -17,7 +17,10 @@ module Youtube
 
         most_watched.push({id: "https://www.youtube.com/watch?v=#{id}", title: title, watch_time: watch_time})
       end
-      most_watched.sort_by { |s| s[:watch_time] }.reverse
+      most_watch_sorted = most_watched.sort_by { |s| s[:watch_time] }.reverse
+
+      #TODO: Não encontrei uma solução para concatenar com bang para ficar mais simples
+      most_watch_sorted.each { |mws| mws[:watch_time] = mws[:watch_time].to_s + "hs" }
     end
 
   end
