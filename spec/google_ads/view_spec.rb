@@ -24,7 +24,7 @@ RSpec.describe "GoogleAds::View" do
         {id_video_principal: 'v7', views: 1183 + 404 + 2393 + 398 + 0 + 394 + 388 + 356 + 64 + 247},
         {id_video_principal: 'v8', views: 398 + 264 + 387 + 368 + 392 + 345 + 283 + 64},
         {id_video_principal: 'v9', views: 442 + 367 + 397 + 384 + 125 + 363 + 43 + 89 + 109 + 63}
-    ]
+      ]
       expect(total_views_per_video).to eq(result)
     end
     
@@ -43,7 +43,7 @@ RSpec.describe "GoogleAds::View" do
         {id_video_principal: 'v7', views: 4240},
         {id_video_principal: 'v8', views: 2103},
         {id_video_principal: 'v9', views: 1940}
-    ]
+      ]
 
       expect(groups).to match_array(result)
     end
@@ -51,7 +51,7 @@ RSpec.describe "GoogleAds::View" do
     it 'total_views_per_video_ideias' do
       groups = GoogleAds::View.new.get_videos_ideias
       result = [
-          { id_video_principal: 'v1', views: 411 + 301 },
+        { id_video_principal: 'v1', views: 411 + 301 },
           { id_video_principal: 'v10', views: 107 + 0 + 37 }
       ]
       expect(true).to be groups.include? result[0]
@@ -66,6 +66,17 @@ RSpec.describe "GoogleAds::View" do
       ]
       expect(true).to be groups.include? result[0]
       expect(true).to be groups.include? result[1]
+    end
+
+    it "sort_cost_benefit_INTERNOS" do
+      groups = GoogleAds::View.new.cost_benefit_by_tag('[INTERNOS]')
+      result = [
+        {id_video_principal:'v11',cost_benefit:6.4},
+          {id_video_principal:'v8',cost_benefit:5.64}
+      ]
+
+      expect(groups.first).to eq(result.first)
+      expect(groups.last).to eq(result.last)
     end
 
   end
