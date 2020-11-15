@@ -10,10 +10,8 @@ class ManageCSV
                 if !row["Views"].match("[0-9]+")
                     raise ArgumentError.new('Tipo de dado incorreto, esperado: númerico.')  
                 end
-            end      
-            
-            return report
-        
+            end
+            self.validate_youtube_title(report)
         else 
             raise ArgumentError.new('É necessário que o CSV contenha os formatos: [Video title] e [Views]')
         end
@@ -33,6 +31,15 @@ class ManageCSV
         end
 
         return validate
+    end
+
+    def self.validate_youtube_title(report)
+        report["Video title"].each do |row|
+            unless row.match(/^[vV]\d*\.\d*\.?\d\:.+/)
+                return "#{row["Video title"]} não está em um formato correto!"
+            end
+        end
+        report
     end
 
 end
