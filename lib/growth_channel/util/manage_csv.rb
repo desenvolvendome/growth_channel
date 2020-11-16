@@ -7,32 +7,22 @@ class ManageCSV
 
         if validate_youtube_headers(report)
             report.each do |row|
-                if !row["Views"].match("[0-9]+") and validate_youtube_title(row['Video title'])
+                unless row["Views"].match("[0-9]+") and validate_youtube_title(row['Video title'])
                     raise ArgumentError.new('Tipo de dado incorreto, esperado: númerico.')  
                 end
-            end      
-            
-            return report
-        
+            end
+            report
         else 
             raise ArgumentError.new('É necessário que o CSV contenha os formatos: [Video title] e [Views]')
         end
-            
-    end
-
-    def self.read_csv_adsense
-        @file_path = "spec/suports/report_adsense.csv"
-        return CSV.read(@file_path, headers: true)
     end
 
     def self.validate_youtube_headers(report)
         if report.headers.include? "Video title" 
             if report.headers.include? "Views"
-                validate = true
+                true
             end
         end
-
-        return validate
     end
 
     def self.validate_youtube_title(title)
@@ -40,6 +30,11 @@ class ManageCSV
             return "#{title} não está em um formato correto!"
         end
         true
+    end
+
+    def self.read_csv_adsense
+        @file_path = "spec/suports/report_adsense.csv"
+        return CSV.read(@file_path, headers: true)
     end
 
 end
