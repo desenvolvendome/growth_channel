@@ -28,8 +28,17 @@ RSpec.describe "ManageCSV" do
             title = ManageCSV.validate_youtube_title("v4.5:")
             expect(title).to eq("v4.5: " + s)
         end
+    end
+
+    context "testing valids titles" do
+
+      it "title in the correct pattern" do
+          title = ManageCSV.validate_youtube_title("v4.5: Qual é a melhor maneira para evoluir como Dev?")
+          expect(title).to eq(true)
+      end
 
     end
+
 end
 
 
