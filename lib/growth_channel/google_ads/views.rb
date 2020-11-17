@@ -44,9 +44,13 @@ module GoogleAds
       total_per_video
     end
 
-    def cost_benefit_per_video
+    def cost_benefit_by_tag(tag, sorted:true)
+      cost_benefit_per_video(sortIncreasing: sorted, filterTag: tag)
+    end
+
+    def cost_benefit_per_video(sortIncreasing: false, filterTag:'')
       group_videos_cost_benefit = []
-      group_main_video_info.each do |video|
+      group_main_video_info(filterTag:filterTag).each do |video|
         id_video_principal = video[:id_video_principal]
         cost_benefit = video[:views] + (video[:watched_25] * 2) + (video[:watched_50] * 4) + (video[:watched_75] * 5) + (video[:watched_100] * 3)
         cost_benefit /= 15 # soma dos pesos
@@ -54,7 +58,7 @@ module GoogleAds
         cost_benefit = cost_benefit.floor(2)
         group_videos_cost_benefit.push({id_video_principal: id_video_principal, cost_benefit: cost_benefit})
       end
-      group_videos_cost_benefit
+      sortIncreasing ? group_videos_cost_benefit.sort_by { |s| s[:cost_benefit] }.reverse : group_videos_cost_benefit
     end
 
     private
@@ -89,9 +93,11 @@ module GoogleAds
       videos_principais
     end
 
-    def group_main_video_info
+    #@return group of videos with your information and that information is already added
+    def group_main_video_info(filterTag:'')
       group_main_video = []
-      videos_principais_agrupados.each do |video|
+      _videos_principais_agrupados = filterTag == '' ? videos_principais_agrupados : group_videos_by_tag(filterTag)
+      _videos_principais_agrupados.each do |video|
         id_video_principal = video.first[:id_video_principal]
         sum_views = video.inject(0) { |sum, hash| sum + hash[:views] }
         sum_cost = video.inject(0) { |sum, hash| sum + hash[:cost] }
