@@ -1,5 +1,6 @@
 require_relative 'utility/video_ads_utility'
 module Video
+  # this class reads the csv of ads and loads information into hashing objects
   class Video_ads
     private
 
@@ -12,10 +13,10 @@ module Video
         id_video_principal = VideoAdsUtility.get_id_video_principal(id_video)
         views = VideoAdsUtility.get_views(row)
         cost = VideoAdsUtility.get_custo(row)
-        watched_25 = VideoAdsUtility.get_reproduction_to_25_percent(row)
-        watched_50 = VideoAdsUtility.get_reproduction_to_50_percent(row)
-        watched_75 = VideoAdsUtility.get_reproduction_to_75_percent(row)
-        watched_100 = VideoAdsUtility.get_reproduction_to_100_percent(row)
+        watched_ads_25 = VideoAdsUtility.get_reproduction_to_25_percent(row)
+        watched_ads_50 = VideoAdsUtility.get_reproduction_to_50_percent(row)
+        watched_ads_75 = VideoAdsUtility.get_reproduction_to_75_percent(row)
+        watched_ads_100 = VideoAdsUtility.get_reproduction_to_100_percent(row)
 
         videos_principais.push({
                                    id_video: id_video,
@@ -23,10 +24,10 @@ module Video
                                    tags_campanha: tags_campanha,
                                    views: views,
                                    cost: cost,
-                                   watched_25: watched_25,
-                                   watched_50: watched_50,
-                                   watched_75: watched_75,
-                                   watched_100: watched_100
+                                   watched_25: watched_ads_25,
+                                   watched_50: watched_ads_50,
+                                   watched_75: watched_ads_75,
+                                   watched_100: watched_ads_100
                                })
       end
       videos_principais
