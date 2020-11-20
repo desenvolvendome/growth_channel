@@ -22,9 +22,9 @@ module GoogleAds
       total_per_video
     end
 
-    def total_views_video_externo
+    def get_videos_externo
       total_per_video = []
-      videos_principais_agrupados_externo.each do |videos_principais_agrupado|
+      group_videos_by_tag('[EXTERNOS]').each do |videos_principais_agrupado|
         id_video_principal = videos_principais_agrupado.first[:id_video_principal]
         sum_views = videos_principais_agrupado.inject(0) { |sum, hash| sum + hash[:views] }
 
@@ -42,6 +42,22 @@ module GoogleAds
         total_per_video.push({id_video_principal: id_video_principal, views: sum_views})
       end
       total_per_video
+    end
+
+    def maiores_invenstimentos(tag, sorted:true)
+      ordem_maiores_invenstimentos(sortIncreasing: sorted, filterTag: tag)
+    end
+
+    def ordem_maiores_invenstimentos(sortIncreasing: false, filterTag:'')
+      group_sorted_investimento = []
+      group_main_video_info(filterTag:filterTag).each do |video|
+        id_video_principal = video[:id_video_principal]
+        cost = video[:cost]
+        cost = cost.floor(2)
+        group_sorted_investimento.push(id_video_principal: id_video_principal, cost: cost)
+
+      end
+      sortIncreasing ? group_sorted_investimento.sort_by {|s| s[:cost]}.reverse : group_sorted_investimento
     end
 
     def cost_benefit_by_tag(tag, sorted:true)
@@ -93,7 +109,6 @@ module GoogleAds
       videos_principais
     end
 
-    #@return group of videos with your information and that information is already added
     def group_main_video_info(filterTag:'')
       group_main_video = []
       _videos_principais_agrupados = filterTag == '' ? videos_principais_agrupados : group_videos_by_tag(filterTag)
