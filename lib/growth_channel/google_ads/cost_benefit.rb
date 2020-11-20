@@ -1,8 +1,8 @@
-require_relative 'video.rb'
+require_relative '../video/video'
 
 module GoogleAds
   # this class calculate the score of benefit cost
-  class CostBenefit < Video
+  class CostBenefit < Video::Video
 
     def by_tag(tag, sorted: true)
       per_video(sort_increasing: sorted, filter_tag: tag)

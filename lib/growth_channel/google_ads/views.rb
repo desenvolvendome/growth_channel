@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require_relative 'video.rb'
+require_relative '../video/video'
 require 'csv'
 require 'growth_channel/util/manage_csv'
 
 module GoogleAds
 
-  class View < Video
+  class View < Video::Video
 
     def initialize
       @@report = ManageCSV.read_csv_adsense
