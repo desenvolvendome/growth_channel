@@ -1,19 +1,19 @@
 class VideoAdsUtility
 
   def self.get_reproduction_to_100_percent(row)
-    rdv100 = row['Reprod. do vídeo até 100%'].sub(',', '.').to_f
+    row['Reprod. do vídeo até 100%'].sub(',', '.').to_f
   end
 
   def self.get_reproduction_to_75_percent(row)
-    rdv75 = row['Reprod. do vídeo até 75%'].sub(',', '.').to_f
+    row['Reprod. do vídeo até 75%'].sub(',', '.').to_f
   end
 
   def self.get_reproduction_to_50_percent(row)
-    rdv50 = row['Reprod. do vídeo até 50%'].sub(',', '.').to_f
+    row['Reprod. do vídeo até 50%'].sub(',', '.').to_f
   end
 
   def self.get_reproduction_to_25_percent(row)
-    rdv25 = row['Reprod. do vídeo até 25%'].sub(',', '.').to_f
+    row['Reprod. do vídeo até 25%'].sub(',', '.').to_f
   end
 
   def self.get_custo(row)
@@ -21,11 +21,11 @@ class VideoAdsUtility
   end
 
   def self.get_views(row)
-    views = row['Visualizações'].to_i
+    row['Visualizações'].to_i
   end
 
   def self.get_id_video_principal(id_video)
-    id_video_principal = id_video.split('.').first
+    id_video.split('.').first
   end
 
   def self.extract_id_video(tags_campanha)
@@ -35,6 +35,33 @@ class VideoAdsUtility
   end
 
   def self.get_campanhas(row)
-    tags_campanha = row['Campanha'].split(' ')
+    row['Campanha'].split(' ')
+  end
+
+  #------------------------------
+  #----group_main_video_info-----
+  #------------------------------
+  def self.get_cost_of_the_parts_the_video(video)
+    video.inject(0) { |sum, hash| sum + hash[:cost] }
+  end
+
+  def self.get_sum_of_the_parts_the_video(video)
+    video.inject(0) { |sum, hash| sum + hash[:views] }
+  end
+
+  def self.get_watched_100_of_parts_the_video(video)
+    video.inject(0) { |sum, hash| sum + hash[:watched_100] }
+  end
+
+  def self.get_watched_75_of_parts_the_video(video)
+    video.inject(0) { |sum, hash| sum + hash[:watched_75] }
+  end
+
+  def self.get_watched_50_of_parts_the_video(video)
+    video.inject(0) { |sum, hash| sum + hash[:watched_50] }
+  end
+
+  def self.get_watched_25_of_parts_the_video(video)
+    video.inject(0) { |sum, hash| sum + hash[:watched_25] }
   end
 end

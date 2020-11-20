@@ -12,10 +12,10 @@ module Video
         id_video_principal = VideoAdsUtility.get_id_video_principal(id_video)
         views = VideoAdsUtility.get_views(row)
         cost = VideoAdsUtility.get_custo(row)
-        rdv25 = VideoAdsUtility.get_reproduction_to_25_percent(row)
-        rdv50 = VideoAdsUtility.get_reproduction_to_50_percent(row)
-        rdv75 = VideoAdsUtility.get_reproduction_to_75_percent(row)
-        rdv100 = VideoAdsUtility.get_reproduction_to_100_percent(row)
+        watched_25 = VideoAdsUtility.get_reproduction_to_25_percent(row)
+        watched_50 = VideoAdsUtility.get_reproduction_to_50_percent(row)
+        watched_75 = VideoAdsUtility.get_reproduction_to_75_percent(row)
+        watched_100 = VideoAdsUtility.get_reproduction_to_100_percent(row)
 
         videos_principais.push({
                                    id_video: id_video,
@@ -23,10 +23,10 @@ module Video
                                    tags_campanha: tags_campanha,
                                    views: views,
                                    cost: cost,
-                                   watched_25: rdv25,
-                                   watched_50: rdv50,
-                                   watched_75: rdv75,
-                                   watched_100: rdv100
+                                   watched_25: watched_25,
+                                   watched_50: watched_50,
+                                   watched_75: watched_75,
+                                   watched_100: watched_100
                                })
       end
       videos_principais
@@ -38,12 +38,12 @@ module Video
       videos_principais = get_group_by_tag(filter_tag)
       videos_principais.each do |video|
         id_video_principal = video.first[:id_video_principal]
-        sum_views = get_sum_of_the_parts_the_video(video)
-        sum_cost = video.inject(0) { |sum, hash| sum + hash[:cost] }
-        sum_watched_25 = video.inject(0) { |sum, hash| sum + hash[:watched_25] }
-        sum_watched_50 = video.inject(0) { |sum, hash| sum + hash[:watched_50] }
-        sum_watched_75 = video.inject(0) { |sum, hash| sum + hash[:watched_75] }
-        sum_watched_100 = video.inject(0) { |sum, hash| sum + hash[:watched_100] }
+        sum_views = VideoAdsUtility.get_sum_of_the_parts_the_video(video)
+        sum_cost = VideoAdsUtility.get_cost_of_the_parts_the_video(video)
+        sum_watched_25 = VideoAdsUtility.get_watched_25_of_parts_the_video(video)
+        sum_watched_50 = VideoAdsUtility.get_watched_50_of_parts_the_video(video)
+        sum_watched_75 = VideoAdsUtility.get_watched_75_of_parts_the_video(video)
+        sum_watched_100 = VideoAdsUtility.get_watched_100_of_parts_the_video(video)
 
         group_main_video.push({
                                   id_video_principal: id_video_principal,
@@ -58,11 +58,7 @@ module Video
       group_main_video
     end
 
-    def get_sum_of_the_parts_the_video(video)
-      sum_views = video.inject(0) { |sum, hash| sum + hash[:views] }
-    end
-
-    def get_group_by_tag(filter_tag)
+    def get_group_by_tag(filter_tag) #utility method
       _videos_principais_agrupados = filter_tag == '' ? videos_principais_agrupados : group_videos_by_tag(filter_tag)
     end
 
