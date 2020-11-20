@@ -58,26 +58,5 @@ RSpec.describe "GoogleAds::View" do
       expect(true).to be groups.include? result[1]
     end
 
-    it 'cost_benefit_per_video' do
-      groups = GoogleAds::View.new.cost_benefit_per_video
-      result = [
-        { id_video_principal: 'v1', cost_benefit: (((712 + (46.43 * 2) + (30.92 * 4) + (25.17 * 5) + (17.97 * 3))/15)/ 10.05).floor(2)},
-        { id_video_principal: 'v10', cost_benefit: (((595 + (29.519 * 2) + (17.27 * 4) + (10.07 * 5) + (5.5 * 3))/15)/ 6.96).floor(2)},
-      ]
-      expect(true).to be groups.include? result[0]
-      expect(true).to be groups.include? result[1]
-    end
-
-    it "sort_cost_benefit_INTERNOS" do
-      groups = GoogleAds::View.new.cost_benefit_by_tag('[INTERNOS]')
-      result = [
-        {id_video_principal:'v11',cost_benefit:6.4},
-          {id_video_principal:'v8',cost_benefit:5.64}
-      ]
-
-      expect(groups.first).to eq(result.first)
-      expect(groups.last).to eq(result.last)
-    end
-
   end
 end
