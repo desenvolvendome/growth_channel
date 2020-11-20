@@ -68,6 +68,7 @@ RSpec.describe "GoogleAds::View" do
       expect(true).to be groups.include? result[1]
     end
 
+
     it 'cost_benefit_per_video' do
       groups = GoogleAds::View.new.cost_benefit_per_video
       result = [
@@ -110,5 +111,6 @@ RSpec.describe "GoogleAds::View" do
       expect(groups.first).to eq(result.first)
       expect(groups.last).to eq(result.last)
     end
+
   end
 end

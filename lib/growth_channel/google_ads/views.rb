@@ -1,11 +1,12 @@
 # frozen_string_literal: true
 
+require_relative '../video/video_ads'
 require 'csv'
 require 'growth_channel/util/manage_csv'
 
 module GoogleAds
 
-  class View
+  class View < Video::Video_ads
 
     def initialize
       @@report = ManageCSV.read_csv_adsense
@@ -43,6 +44,7 @@ module GoogleAds
       end
       total_per_video
     end
+
 
     def maiores_invenstimentos(tag, sorted:true)
       ordem_maiores_invenstimentos(sortIncreasing: sorted, filterTag: tag)
@@ -146,13 +148,7 @@ module GoogleAds
       videos_externo.group_by { |h| h[:id_video_principal] }.values
     end
 
-    def group_videos_by_tag(tag)
-      group = []
-      read_per_video.each do |video|
-        group.push(video) if video[:tags_campanha].include? tag
-      end
-      group.group_by { |h| h[:id_video_principal] }.values
-    end
+
 
   end
 end
