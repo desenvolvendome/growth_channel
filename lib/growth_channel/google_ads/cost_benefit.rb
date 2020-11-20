@@ -1,8 +1,8 @@
-require_relative '../video/video'
+require_relative '../video/video_ads'
 
 module GoogleAds
   # this class calculate the score of benefit cost
-  class CostBenefit < Video::Video
+  class CostBenefit < Video::Video_ads
 
     def by_tag(tag, sorted: true)
       per_video(sort_increasing: sorted, filter_tag: tag)
@@ -10,7 +10,7 @@ module GoogleAds
 
     def per_video(sort_increasing: false, filter_tag: '')
       group_videos = []
-      group_main_video_info(filterTag: filter_tag).each do |video|
+      group_main_video_info(filter_tag: filter_tag).each do |video|
         generate_score(group_videos, video)
       end
       sort_increasing ? group_videos.sort_by { |element| element[:cost_benefit] }.reverse : group_videos

@@ -1,21 +1,21 @@
+require_relative 'utility/video_ads_utility'
 module Video
-  class Video
+  class Video_ads
     private
 
     def read_per_video
 
       videos_principais = []
       ManageCSV.read_csv_adsense.each do |row|
-        tags_campanha = row['Campanha'].split(' ')
-        id_video = tags_campanha.first
-        tags_campanha.shift
-        id_video_principal = id_video.split('.').first
-        views = row['Visualizações'].to_i
-        cost = row['Custo'].sub(',', '.').to_f
-        rdv25 = row['Reprod. do vídeo até 25%'].sub(',', '.').to_f
-        rdv50 = row['Reprod. do vídeo até 50%'].sub(',', '.').to_f
-        rdv75 = row['Reprod. do vídeo até 75%'].sub(',', '.').to_f
-        rdv100 = row['Reprod. do vídeo até 100%'].sub(',', '.').to_f
+        tags_campanha = VideoAdsUtility.get_campanhas(row)
+        id_video = VideoAdsUtility.extract_id_video(tags_campanha)
+        id_video_principal = VideoAdsUtility.get_id_video_principal(id_video)
+        views = VideoAdsUtility.get_views(row)
+        cost = VideoAdsUtility.get_custo(row)
+        rdv25 = VideoAdsUtility.get_reproduction_to_25_percent(row)
+        rdv50 = VideoAdsUtility.get_reproduction_to_50_percent(row)
+        rdv75 = VideoAdsUtility.get_reproduction_to_75_percent(row)
+        rdv100 = VideoAdsUtility.get_reproduction_to_100_percent(row)
 
         videos_principais.push({
                                    id_video: id_video,
@@ -32,13 +32,13 @@ module Video
       videos_principais
     end
 
-    #@return group of videos with your information and that information is already added
-    def group_main_video_info(filterTag: '')
+    #@return group of videos with your information and that information and they are ready
+    def group_main_video_info(filter_tag: '')
       group_main_video = []
-      _videos_principais_agrupados = filterTag == '' ? videos_principais_agrupados : group_videos_by_tag(filterTag)
-      _videos_principais_agrupados.each do |video|
+      videos_principais = get_group_by_tag(filter_tag)
+      videos_principais.each do |video|
         id_video_principal = video.first[:id_video_principal]
-        sum_views = video.inject(0) { |sum, hash| sum + hash[:views] }
+        sum_views = get_sum_of_the_parts_the_video(video)
         sum_cost = video.inject(0) { |sum, hash| sum + hash[:cost] }
         sum_watched_25 = video.inject(0) { |sum, hash| sum + hash[:watched_25] }
         sum_watched_50 = video.inject(0) { |sum, hash| sum + hash[:watched_50] }
@@ -56,6 +56,14 @@ module Video
                               })
       end
       group_main_video
+    end
+
+    def get_sum_of_the_parts_the_video(video)
+      sum_views = video.inject(0) { |sum, hash| sum + hash[:views] }
+    end
+
+    def get_group_by_tag(filter_tag)
+      _videos_principais_agrupados = filter_tag == '' ? videos_principais_agrupados : group_videos_by_tag(filter_tag)
     end
 
     def videos_principais_agrupados
