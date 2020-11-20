@@ -23,9 +23,9 @@ module GoogleAds
       total_per_video
     end
 
-    def total_views_video_externo
+    def get_videos_externo
       total_per_video = []
-      videos_principais_agrupados_externo.each do |videos_principais_agrupado|
+      group_videos_by_tag('[EXTERNOS]').each do |videos_principais_agrupado|
         id_video_principal = videos_principais_agrupado.first[:id_video_principal]
         sum_views = videos_principais_agrupado.inject(0) { |sum, hash| sum + hash[:views] }
 
@@ -45,8 +45,100 @@ module GoogleAds
       total_per_video
     end
 
+
+    def maiores_invenstimentos(tag, sorted:true)
+      ordem_maiores_invenstimentos(sortIncreasing: sorted, filterTag: tag)
+    end
+
+    def ordem_maiores_invenstimentos(sortIncreasing: false, filterTag:'')
+      group_sorted_investimento = []
+      group_main_video_info(filterTag:filterTag).each do |video|
+        id_video_principal = video[:id_video_principal]
+        cost = video[:cost]
+        cost = cost.floor(2)
+        group_sorted_investimento.push(id_video_principal: id_video_principal, cost: cost)
+
+      end
+      sortIncreasing ? group_sorted_investimento.sort_by {|s| s[:cost]}.reverse : group_sorted_investimento
+    end
+
+    def cost_benefit_by_tag(tag, sorted:true)
+      cost_benefit_per_video(sortIncreasing: sorted, filterTag: tag)
+    end
+
+    def cost_benefit_per_video(sortIncreasing: false, filterTag:'')
+      group_videos_cost_benefit = []
+      group_main_video_info(filterTag:filterTag).each do |video|
+        id_video_principal = video[:id_video_principal]
+        cost_benefit = video[:views] + (video[:watched_25] * 2) + (video[:watched_50] * 4) + (video[:watched_75] * 5) + (video[:watched_100] * 3)
+        cost_benefit /= 15 # soma dos pesos
+        cost_benefit /= video[:cost]
+        cost_benefit = cost_benefit.floor(2)
+        group_videos_cost_benefit.push({id_video_principal: id_video_principal, cost_benefit: cost_benefit})
+      end
+      sortIncreasing ? group_videos_cost_benefit.sort_by { |s| s[:cost_benefit] }.reverse : group_videos_cost_benefit
+    end
+
     private
 
+    def read_per_video
+
+      videos_principais = []
+      @@report.each do |row|
+        tags_campanha = row['Campanha'].split(' ')
+        id_video = tags_campanha.first
+        tags_campanha.shift
+        id_video_principal = id_video.split('.').first
+        views = row['Visualizações'].to_i
+        cost = row['Custo'].sub(',', '.').to_f
+        rdv25 = row['Reprod. do vídeo até 25%'].sub(',', '.').to_f
+        rdv50 = row['Reprod. do vídeo até 50%'].sub(',', '.').to_f
+        rdv75 = row['Reprod. do vídeo até 75%'].sub(',', '.').to_f
+        rdv100 = row['Reprod. do vídeo até 100%'].sub(',', '.').to_f
+
+        videos_principais.push({
+                                   id_video: id_video,
+                                   id_video_principal: id_video_principal,
+                                   tags_campanha: tags_campanha,
+                                   views: views,
+                                   cost: cost,
+                                   watched_25: rdv25,
+                                   watched_50: rdv50,
+                                   watched_75: rdv75,
+                                   watched_100: rdv100
+                               })
+      end
+      videos_principais
+    end
+
+    def group_main_video_info(filterTag:'')
+      group_main_video = []
+      _videos_principais_agrupados = filterTag == '' ? videos_principais_agrupados : group_videos_by_tag(filterTag)
+      _videos_principais_agrupados.each do |video|
+        id_video_principal = video.first[:id_video_principal]
+        sum_views = video.inject(0) { |sum, hash| sum + hash[:views] }
+        sum_cost = video.inject(0) { |sum, hash| sum + hash[:cost] }
+        sum_watched_25 = video.inject(0) { |sum, hash| sum + hash[:watched_25] }
+        sum_watched_50 = video.inject(0) { |sum, hash| sum + hash[:watched_50] }
+        sum_watched_75 = video.inject(0) { |sum, hash| sum + hash[:watched_75] }
+        sum_watched_100 = video.inject(0) { |sum, hash| sum + hash[:watched_100] }
+
+        group_main_video.push({
+                                  id_video_principal: id_video_principal,
+                                  views: sum_views,
+                                  cost: sum_cost,
+                                  watched_25: sum_watched_25,
+                                  watched_50: sum_watched_50,
+                                  watched_75: sum_watched_75,
+                                  watched_100: sum_watched_100
+                              })
+      end
+      group_main_video
+    end
+
+    def videos_principais_agrupados
+      read_per_video.group_by { |h| h[:id_video_principal] }.values
+    end
 
     def videos_principais_agrupados_externo
       videos_externo = []
