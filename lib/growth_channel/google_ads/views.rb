@@ -8,10 +8,6 @@ module GoogleAds
 
   class View < Video::Video_ads
 
-    def initialize
-      @@report = ManageCSV.read_csv_adsense
-    end
-
     def total_views_per_video
       total_per_video = []
       videos_principais_agrupados.each do |videos_principais_agrupado|
@@ -46,7 +42,6 @@ module GoogleAds
     end
 
     private
-
 
     def videos_principais_agrupados_externo
       videos_externo = []
