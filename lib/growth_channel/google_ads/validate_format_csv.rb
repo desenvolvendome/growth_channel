@@ -1,6 +1,7 @@
 require 'csv'
 
 module Validate_Format
+  # this class validate csv format
   class Validate
 
     def initialize(file_path)

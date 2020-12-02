@@ -33,7 +33,7 @@ module Video
       videos_principais
     end
 
-    #@return group of videos with your information and that information and they are ready
+    # @return group of videos with your information and that information and they are ready
     def group_main_video_info(filter_tag: '')
       group_main_video = []
       videos_principais = get_group_by_tag(filter_tag)
@@ -59,7 +59,7 @@ module Video
       group_main_video
     end
 
-    def get_group_by_tag(filter_tag) #utility method
+    def get_group_by_tag(filter_tag) # utility method
       _videos_principais_agrupados = filter_tag == '' ? videos_principais_agrupados : group_videos_by_tag(filter_tag)
     end
 
