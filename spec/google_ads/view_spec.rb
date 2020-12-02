@@ -4,8 +4,8 @@ RSpec.describe "GoogleAds::View" do
 
   context "count" do
 
-    it "total_views_per_video" do
-      total_views_per_video = GoogleAds::View.new.total_views_per_video
+    it "total_per_video" do
+      total_views_per_video = GoogleAds::View.new.total_per_video
       result = [
           {id_video_principal: 'v1', views: 411 + 301},
           {id_video_principal: 'v10', views: 451 + 107 + 0 + 37},
@@ -30,7 +30,7 @@ RSpec.describe "GoogleAds::View" do
 
     it "total_views_video_externo" do
 
-      groups = GoogleAds::View.new.total_views_video_externo
+      groups = GoogleAds::View.new.total_per_video_externo
       result = [
           {id_video_principal: 'v1', views: 712},
           {id_video_principal: 'v10', views: 144},
@@ -44,12 +44,11 @@ RSpec.describe "GoogleAds::View" do
           {id_video_principal: 'v8', views: 2103},
           {id_video_principal: 'v9', views: 1940}
       ]
-
       expect(groups).to match_array(result)
     end
 
     it 'total_views_per_video_ideias' do
-      groups = GoogleAds::View.new.get_videos_ideias
+      groups = GoogleAds::View.new.total_per_video(tag:'[Ideias]')
       result = [
           { id_video_principal: 'v1', views: 411 + 301 },
           { id_video_principal: 'v10', views: 107 + 0 + 37 }
@@ -57,6 +56,5 @@ RSpec.describe "GoogleAds::View" do
       expect(true).to be groups.include? result[0]
       expect(true).to be groups.include? result[1]
     end
-
   end
 end

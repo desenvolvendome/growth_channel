@@ -5,40 +5,30 @@ require 'csv'
 require 'growth_channel/util/manage_csv'
 
 module GoogleAds
-
+  # this class list about videos of google_ads having information about views and watchers
   class View < Video::Video_ads
-
-    def total_views_per_video
+    # @param [String] tag this for default is none, so list all videos in group, if you passed an tag list by tag.
+    def total_per_video(tag: '')
       total_per_video = []
-      videos_principais_agrupados.each do |videos_principais_agrupado|
+      get_group_by_tag(tag).each do |videos_principais_agrupado|
         id_video_principal = videos_principais_agrupado.first[:id_video_principal]
         sum_views = videos_principais_agrupado.inject(0) { |sum, hash| sum + hash[:views] }
 
-        total_per_video.push({id_video_principal: id_video_principal, views: sum_views})
+        total_per_video.push({ id_video_principal: id_video_principal, views: sum_views })
       end
       total_per_video
     end
 
-    def total_views_video_externo
-      total_per_video = []
+    def total_per_video_externo
+      # TODO: refactor when solve externo csv problem, so remove this function and update test
+      total_per_video_externo = []
       videos_principais_agrupados_externo.each do |videos_principais_agrupado|
         id_video_principal = videos_principais_agrupado.first[:id_video_principal]
         sum_views = videos_principais_agrupado.inject(0) { |sum, hash| sum + hash[:views] }
 
-        total_per_video.push({id_video_principal: id_video_principal, views: sum_views})
+        total_per_video_externo.push({ id_video_principal: id_video_principal, views: sum_views })
       end
-      total_per_video
-    end
-
-    def get_videos_ideias
-      total_per_video = []
-      group_videos_by_tag('[Ideias]').each do |videos_principais_agrupado|
-        id_video_principal = videos_principais_agrupado.first[:id_video_principal]
-        sum_views = videos_principais_agrupado.inject(0) { |sum, hash| sum + hash[:views] }
-
-        total_per_video.push({id_video_principal: id_video_principal, views: sum_views})
-      end
-      total_per_video
+      total_per_video_externo
     end
 
     private
@@ -50,6 +40,5 @@ module GoogleAds
       end
       videos_externo.group_by { |h| h[:id_video_principal] }.values
     end
-
   end
 end
