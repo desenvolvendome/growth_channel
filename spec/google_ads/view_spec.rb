@@ -4,8 +4,8 @@ RSpec.describe "GoogleAds::View" do
 
   context "count" do
 
-    it "total_views_per_video" do
-      total_views_per_video = GoogleAds::View.new.total_views_per_video
+    it "total_per_video" do
+      total_views_per_video = GoogleAds::View.new.total_per_video
       result = [
           {id_video_principal: 'v1', views: 411 + 301},
           {id_video_principal: 'v10', views: 451 + 107 + 0 + 37},
@@ -28,18 +28,27 @@ RSpec.describe "GoogleAds::View" do
       expect(total_views_per_video).to eq(result)
     end
 
-    it 'total_views_per_video_externo' do
-      groups = GoogleAds::View.new.get_videos_externo
+    it "total_views_video_externo" do
+
+      groups = GoogleAds::View.new.total_per_video_externo
       result = [
-          { id_video_principal: 'v1', views: 411 + 301 },
-          { id_video_principal: 'v10', views: 107 + 0 + 37 }
+          {id_video_principal: 'v1', views: 712},
+          {id_video_principal: 'v10', views: 144},
+          {id_video_principal: 'v11', views: 1024},
+          {id_video_principal: 'v12', views: 353},
+          {id_video_principal: 'v2', views: 1252},
+          {id_video_principal: 'v3', views: 829},
+          {id_video_principal: 'v4', views: 546},
+          {id_video_principal: 'v5', views: 3273},
+          {id_video_principal: 'v7', views: 4240},
+          {id_video_principal: 'v8', views: 2103},
+          {id_video_principal: 'v9', views: 1940}
       ]
-      expect(true).to be groups.include? result[0]
-      expect(true).to be groups.include? result[1]
+      expect(groups).to match_array(result)
     end
 
     it 'total_views_per_video_ideias' do
-      groups = GoogleAds::View.new.get_videos_ideias
+      groups = GoogleAds::View.new.total_per_video(tag:'[Ideias]')
       result = [
           { id_video_principal: 'v1', views: 411 + 301 },
           { id_video_principal: 'v10', views: 107 + 0 + 37 }
@@ -47,70 +56,5 @@ RSpec.describe "GoogleAds::View" do
       expect(true).to be groups.include? result[0]
       expect(true).to be groups.include? result[1]
     end
-
-    it 'total_views_per_video_ideias' do
-      groups = GoogleAds::View.new.get_videos_ideias
-      result = [
-          { id_video_principal: 'v1', views: 411 + 301 },
-          { id_video_principal: 'v10', views: 107 + 0 + 37 }
-      ]
-      expect(true).to be groups.include? result[0]
-      expect(true).to be groups.include? result[1]
-    end
-
-    it 'total_views_per_video_ideias' do
-      groups = GoogleAds::View.new.get_videos_ideias
-      result = [
-          { id_video_principal: 'v1', views: 411 + 301 },
-          { id_video_principal: 'v10', views: 107 + 0 + 37 }
-      ]
-      expect(true).to be groups.include? result[0]
-      expect(true).to be groups.include? result[1]
-    end
-
-
-    it 'cost_benefit_per_video' do
-      groups = GoogleAds::View.new.cost_benefit_per_video
-      result = [
-          { id_video_principal: 'v1', cost_benefit: (((712 + (46.43 * 2) + (30.92 * 4) + (25.17 * 5) + (17.97 * 3))/15)/ 10.05).floor(2)},
-          { id_video_principal: 'v10', cost_benefit: (((595 + (29.519 * 2) + (17.27 * 4) + (10.07 * 5) + (5.5 * 3))/15)/ 6.96).floor(2)},
-      ]
-      expect(true).to be groups.include? result[0]
-      expect(true).to be groups.include? result[1]
-    end
-
-    it "sort_cost_benefit_INTERNOS" do
-      groups = GoogleAds::View.new.cost_benefit_by_tag('[INTERNOS]')
-      result = [
-          {id_video_principal:'v11',cost_benefit:6.4},
-          {id_video_principal:'v8',cost_benefit:5.64}
-      ]
-
-      expect(groups.first).to eq(result.first)
-      expect(groups.last).to eq(result.last)
-    end
-
-    it 'sort_cost_benefit_EXTERNOS' do
-      groups = GoogleAds::View.new.cost_benefit_by_tag('[EXTERNOS]')
-      result = [
-          {id_video_principal:'v10',cost_benefit:10.51},
-          {id_video_principal:'v6',cost_benefit:4.04}
-      ]
-
-      expect(groups.first).to eq(result.first)
-      expect(groups.last).to eq(result.last)
-    end
-
-    it 'maiores_invenstimentos' do
-      groups = GoogleAds::View.new.maiores_invenstimentos('')
-      result = [
-          {id_video_principal: 'v7', cost: 77.52},
-          {id_video_principal: 'v17', cost: 3.22}
-      ]
-
-      expect(groups.first).to eq(result.first)
-      expect(groups.last).to eq(result.last)
-    end
-
   end
 end
