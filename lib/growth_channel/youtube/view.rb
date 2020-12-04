@@ -5,12 +5,12 @@ module Youtube
   class View
 
     def initialize
-      @@report = ManageCSV.read_csv_youtube
+      @report = ManageCSV.read_csv_youtube
     end
 
     def total_views
       total_views = 0
-      @@report.each do |row|
+      @report.each do |row|
         views = row["Views"].to_i
         total_views += views
       end
@@ -32,7 +32,7 @@ module Youtube
 
     def read_per_video
       videos_principais = []
-      @@report.each do |row|
+      @report.each do |row|
         id_video = row["Video title"].split(":").first
         id_video_principal = id_video.split(".").first
         views = row["Views"].to_i
