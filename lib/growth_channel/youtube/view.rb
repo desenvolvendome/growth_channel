@@ -33,7 +33,7 @@ module Youtube
     def read_per_video
       videos_principais = []
       @report.each do |row|
-        id_video = row["Video title"].split(":").first
+        id_video = row["Video title"].split(".").first
         id_video_principal = id_video.split(".").first
         views = row["Views"].to_i
 
