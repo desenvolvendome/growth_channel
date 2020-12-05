@@ -1,5 +1,3 @@
-require 'growth_channel/google_ads/cost_benefit'
-
 RSpec.describe 'GoogleAds::CostBenefit' do
 
   context 'List' do

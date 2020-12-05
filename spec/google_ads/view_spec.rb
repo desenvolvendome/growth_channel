@@ -1,5 +1,3 @@
-require 'growth_channel/google_ads/views'
-
 RSpec.describe "GoogleAds::View" do
 
   context "count" do

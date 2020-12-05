@@ -1,5 +1,3 @@
-require 'growth_channel/youtube/view'
-
 RSpec.describe "Youtube::View" do
 
   context "count" do

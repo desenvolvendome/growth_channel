@@ -1,4 +1,3 @@
-require 'growth_channel/google_ads/validate_format_csv'
 
 RSpec.describe 'Validate_Format::Validate' do
 

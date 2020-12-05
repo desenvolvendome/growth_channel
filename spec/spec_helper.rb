@@ -1,6 +1,7 @@
 require "bundler/setup"
 require "growth_channel"
 require "byebug"
+require_relative 'suports/autoload'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

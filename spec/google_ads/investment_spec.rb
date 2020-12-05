@@ -1,5 +1,3 @@
-require 'growth_channel/google_ads/investment'
-
 RSpec.describe 'GoogleAds::Investment' do
 
   context 'List' do

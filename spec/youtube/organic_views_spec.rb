@@ -1,5 +1,3 @@
-require 'growth_channel/youtube/organic_views'
-
 RSpec.describe "OrganicViews::View" do
 
   context "count" do
