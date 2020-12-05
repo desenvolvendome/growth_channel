@@ -8,6 +8,14 @@ RSpec.describe "Youtube::View" do
       expect(total_views).to eq(31224)
     end
 
+    it "organic_view" do
+      organic_views = Youtube::View.new.organic_view
+      result = [
+        {id_video: 'v1', views: 501}
+      ]
+      expect(organic_views.first).to eq(result.first)
+    end
+
     it "total_views_per_video" do
       total_views_per_video = Youtube::View.new.total_views_per_video
       result = [
