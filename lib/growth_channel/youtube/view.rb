@@ -17,6 +17,10 @@ module Youtube
       total_views
     end
 
+    def sort_by_more_views
+      organic_view.sort_by { |hash| hash[:views] }.reverse
+    end
+
     def validate_subtraction(youtube, adsense)
       youtube - adsense >= 0 ? true : nil
     end
