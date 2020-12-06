@@ -1,11 +1,21 @@
+require "growth_channel/youtube/view"
+
 RSpec.describe "Youtube::View" do
-
   context "count" do
-
     it "total_views" do
       total_views = Youtube::View.new.total_views
 
       expect(total_views).to eq(31224)
+    end
+
+    it "sort_by_more_views" do
+      sort = Youtube::View.new.sort_by_more_views
+      result = [
+        {id_video: "v7", views: 1156},
+        {id_video: "v5: apresenta inconsistência nos dados", views: -472}
+      ]
+      expect(sort.first).to eq(result.first)
+      expect(sort.last).to eq(result.last)
     end
 
     it "organic_view" do
@@ -41,8 +51,5 @@ RSpec.describe "Youtube::View" do
     ]
       expect(total_views_per_video).to eq(result)
     end
-
   end
-
-
 end
