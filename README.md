@@ -1,16 +1,24 @@
-# GrowthChannel ![CI](https://github.com/desenvolvendo-me/growth_channel/workflows/Ruby/badge.svg)
+# README
 
-- [Estatísticas do Youtube](https://docs.google.com/spreadsheets/d/1QgU-4PGma0DSBOq0E-4b8Vbol8XK7i1_qu-eyS1GlRY/edit?usp=sharing)
-- [Estatísticas do Google Ads](https://docs.google.com/spreadsheets/d/1N3j50V2VfwU8VXsBemKNUp1SPEXCYPbUCYjwMxViKzs/edit?usp=sharing)
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-## Como testar
+Things you may want to cover:
 
-### Instale todas as gems
-```
-bundle install
-```
+* Ruby version
 
-### Execute o rspec
-```
-rspec
-```
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
