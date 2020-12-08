@@ -1,6 +1,6 @@
 # README
 
-## Install
+## Installing
 
 - git pull --rebase
 - bundle
@@ -11,3 +11,8 @@
 ## Running
 
 - rails s
+
+## Acessing
+
+- http://localhost:3000
+- http://localhost:3000/letter_opener/
