@@ -48,14 +48,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="533713de-87d9-4653-997b-0956840dfb06" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/growth_channel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/growth_channel.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/welcome.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/devise.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607128119315</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="build(devise): adicionado gem devise">
+      <created>1607388359159</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607388359159</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,17 +322,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix(rspec): organizado autoload" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(rspec): organizado autoload" />
+    <MESSAGE value="build(devise): adicionado gem devise" />
+    <option name="LAST_COMMIT_MESSAGE" value="build(devise): adicionado gem devise" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2348" y="317" width="1053" height="443" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605916894071">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2348" y="317" width="1053" height="443" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605916894071" />
-    <state x="2249" y="9" width="1252" height="1060" key="CommitChangelistDialog2" timestamp="1607128119027">
+    <state x="2249" y="9" width="1252" height="1060" key="CommitChangelistDialog2" timestamp="1607388358781">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2249" y="9" width="1252" height="1060" key="CommitChangelistDialog2/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607128119027" />
+    <state x="2249" y="9" width="1252" height="1060" key="CommitChangelistDialog2/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607388358781" />
     <state width="1860" height="598" key="GridCell.Tab.0.bottom" timestamp="1607384857167">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -389,10 +394,14 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="712" height="498" key="SwitcherDM/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607388109826" />
-    <state x="2459" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1607388052955">
+    <state x="2469" y="189" width="822" height="700" key="find.popup" timestamp="1607389260835">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2459" y="45" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607388052955" />
+    <state x="2469" y="189" width="822" height="700" key="find.popup/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607389260834" />
+    <state x="2459" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1607389481224">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2459" y="45" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607389481224" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/growth_channel@All_specs_in_spec__growth_channel.rcov" NAME="All specs in spec: growth_channel Coverage Results" MODIFIED="1607384840291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="growth_channel" />
