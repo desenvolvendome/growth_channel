@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:release" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:release" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:upstream" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:upstream" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:feature" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:upstream" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:release" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="533713de-87d9-4653-997b-0956840dfb06" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/welcome.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/devise.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="develop" />
+                    <option name="lastUsedInstant" value="1607384616" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="release/v0.1" />
+                    <option name="lastUsedInstant" value="1607384615" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kZmZ2FMxEtKatXWOeb4dwDnrAe" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="ruby" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/growth_channel/csv" />
+    </key>
+  </component>
+  <component name="RunManager" selected="RSpec.All specs in spec: growth_channel">
+    <configuration name="All specs in spec: growth_channel" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+      <module name="growth_channel" />
+      <predefined_log_file enabled="true" id="RUBY_RSPEC" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="$MODULE_DIR$/spec" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="ALL_IN_FOLDER" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GoogleAds::CostBenefit List" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
+      <module name="growth_channel" />
+      <predefined_log_file enabled="true" id="RUBY_RSPEC" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/google_ads/cost_benefit_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="GoogleAds::CostBenefit List" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="OrganicViews::View count" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
+      <module name="growth_channel" />
+      <predefined_log_file enabled="true" id="RUBY_RSPEC" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/youtube/organic_views_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="OrganicViews::View count" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Validate_Format::Validate" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
+      <module name="growth_channel" />
+      <predefined_log_file enabled="true" id="RUBY_RSPEC" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/google_ads/validate_csv_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="Validate_Format::Validate" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch_3" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$APPLICATION_CONFIG_DIR$/scratches" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="RSpec.All specs in spec: growth_channel" />
+        <item itemvalue="Ruby.scratch_3" />
+        <item itemvalue="RSpec.OrganicViews::View count" />
+        <item itemvalue="RSpec.GoogleAds::CostBenefit List" />
+        <item itemvalue="RSpec.Validate_Format::Validate" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="533713de-87d9-4653-997b-0956840dfb06" name="Default Changelist" comment="" />
+      <created>1605916540547</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605916540547</updated>
+      <workItem from="1605916542324" duration="363000" />
+      <workItem from="1605916913716" duration="1512000" />
+      <workItem from="1607127233599" duration="2828000" />
+      <workItem from="1607345226372" duration="599000" />
+      <workItem from="1607384100446" duration="1558000" />
+    </task>
+    <task id="LOCAL-00001" summary="fix(rspec): organizado autoload">
+      <created>1607128119315</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607128119315</updated>
+    </task>
+    <task id="LOCAL-00002" summary="build(devise): adicionado gem devise">
+      <created>1607388359159</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607388359159</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix(rspec): organizado autoload" />
+    <MESSAGE value="build(devise): adicionado gem devise" />
+    <option name="LAST_COMMIT_MESSAGE" value="build(devise): adicionado gem devise" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2348" y="317" width="1053" height="443" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605916894071">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2348" y="317" width="1053" height="443" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605916894071" />
+    <state x="2249" y="9" width="1252" height="1060" key="CommitChangelistDialog2" timestamp="1607388358781">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2249" y="9" width="1252" height="1060" key="CommitChangelistDialog2/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607388358781" />
+    <state width="1860" height="598" key="GridCell.Tab.0.bottom" timestamp="1607384857167">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1860" height="598" key="GridCell.Tab.0.bottom/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607384857167" />
+    <state width="1860" height="598" key="GridCell.Tab.0.center" timestamp="1607384857167">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1860" height="598" key="GridCell.Tab.0.center/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607384857167" />
+    <state width="1860" height="598" key="GridCell.Tab.0.left" timestamp="1607384857167">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1860" height="598" key="GridCell.Tab.0.left/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607384857167" />
+    <state width="1860" height="598" key="GridCell.Tab.0.right" timestamp="1607384857167">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1860" height="598" key="GridCell.Tab.0.right/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607384857167" />
+    <state width="1860" height="598" key="GridCell.Tab.1.bottom" timestamp="1607384857168">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1860" height="598" key="GridCell.Tab.1.bottom/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607384857168" />
+    <state width="1860" height="598" key="GridCell.Tab.1.center" timestamp="1607384857168">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1860" height="598" key="GridCell.Tab.1.center/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607384857168" />
+    <state width="1860" height="598" key="GridCell.Tab.1.left" timestamp="1607384857168">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1860" height="598" key="GridCell.Tab.1.left/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607384857168" />
+    <state width="1860" height="598" key="GridCell.Tab.1.right" timestamp="1607384857168">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1860" height="598" key="GridCell.Tab.1.right/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607384857168" />
+    <state width="1860" height="598" key="GridCell.Tab.2.bottom" timestamp="1607384857168">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1860" height="598" key="GridCell.Tab.2.bottom/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607384857168" />
+    <state width="1860" height="598" key="GridCell.Tab.2.center" timestamp="1607384857168">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1860" height="598" key="GridCell.Tab.2.center/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607384857168" />
+    <state width="1860" height="598" key="GridCell.Tab.2.left" timestamp="1607384857168">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1860" height="598" key="GridCell.Tab.2.left/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607384857168" />
+    <state width="1860" height="598" key="GridCell.Tab.2.right" timestamp="1607384857168">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1860" height="598" key="GridCell.Tab.2.right/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607384857168" />
+    <state x="2338" y="129" width="1074" height="819" key="RollbackChangesDialog" timestamp="1607129092698">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2338" y="129" width="1074" height="819" key="RollbackChangesDialog/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607129092698" />
+    <state x="2282" y="86" key="SettingsEditor" timestamp="1605917035381">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2282" y="86" key="SettingsEditor/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605917035381" />
+    <state width="712" height="498" key="SwitcherDM" timestamp="1607388109826">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="712" height="498" key="SwitcherDM/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607388109826" />
+    <state x="2469" y="189" width="822" height="700" key="find.popup" timestamp="1607389260835">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2469" y="189" width="822" height="700" key="find.popup/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607389260834" />
+    <state x="2459" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1607389481224">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2459" y="45" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1041/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607389481224" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/growth_channel@All_specs_in_spec__growth_channel.rcov" NAME="All specs in spec: growth_channel Coverage Results" MODIFIED="1607384840291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="growth_channel" />
+    <SUITE FILE_PATH="coverage/growth_channel@GoogleAds__CostBenefit_List.rcov" NAME="GoogleAds::CostBenefit List Coverage Results" MODIFIED="1607128064205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="growth_channel" />
+    <SUITE FILE_PATH="coverage/growth_channel@GoogleAds__CostBenefit.rcov" NAME="GoogleAds::CostBenefit Coverage Results" MODIFIED="1607127781445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="growth_channel" />
+    <SUITE FILE_PATH="coverage/growth_channel@GoogleAds__Investment_List.rcov" NAME="GoogleAds::Investment List Coverage Results" MODIFIED="1607127797989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="growth_channel" />
+    <SUITE FILE_PATH="coverage/growth_channel@OrganicViews__View_count.rcov" NAME="OrganicViews::View count Coverage Results" MODIFIED="1607128722759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="growth_channel" />
+    <SUITE FILE_PATH="coverage/growth_channel@Validate_Format__Validate.rcov" NAME="Validate_Format::Validate Coverage Results" MODIFIED="1607127804278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="growth_channel" />
+  </component>
+</project>

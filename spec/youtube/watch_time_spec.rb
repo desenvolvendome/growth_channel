@@ -1,5 +1,3 @@
-require 'growth_channel/youtube/watch_time'
-
 RSpec.describe "Youtube::WatchTime" do
 
   context "count" do
